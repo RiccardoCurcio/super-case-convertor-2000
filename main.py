@@ -162,6 +162,25 @@ class case(object):
         return string
 
     @staticmethod
+    def raw(string: str = "", replaceSeparator: Optional[str] = None) -> str:
+        """Convert string to raw case.
+
+        Parameters
+        ----------
+        string : str
+            String to convert.
+
+        Returns
+        -------
+        str
+            String converted to raw case.
+
+        """
+        string = case.snake(string=string, replaceSeparator=replaceSeparator)
+        string = string.replace('_', ' ')
+        return string
+
+    @staticmethod
     def path(string: str = "", replaceSeparator: Optional[str] = None) -> str:
         """Convert string to path.
 
@@ -373,6 +392,10 @@ for string in strings:
 print("\n *** flat *** ")
 for string in strings:
     print("{} -> {}".format(string, case.flat(string)))
+
+print("\n *** raw *** ")
+for string in strings:
+    print("{} -> {}".format(string, case.raw(string=string, replaceSeparator="*|*")))
 
 print("\n *** path *** ")
 for string in strings:
