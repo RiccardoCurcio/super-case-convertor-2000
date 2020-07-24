@@ -80,6 +80,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -99,6 +101,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -122,6 +126,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -150,6 +156,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -169,6 +177,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -188,6 +198,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -207,6 +219,8 @@ class case(object):
         ----------
         string : str
             String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -233,6 +247,8 @@ class case(object):
             String to convert.
         separator : str
             Separator.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -263,6 +279,8 @@ class case(object):
             Opening character.
         close : Optional[str]
             Closing character if `close` is None will become equal to `open`.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -304,7 +322,9 @@ class case(object):
         capitalize : bool
             If capitalize is True capitalize all strings.
         upper : bool
-            If upper is True convert to uppercase all strings..
+            If upper is True convert to uppercase all strings.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
@@ -348,7 +368,9 @@ class case(object):
         Parameters
         ----------
         string : str
-            String to convert..
+            String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
 
         Returns
         -------
