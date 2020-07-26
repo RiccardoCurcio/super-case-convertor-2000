@@ -17,18 +17,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-
-"""
-flatcase
-kebab-case. Also called caterpillar-case, dash-case, hyphen-case, lisp-case, spinal-case and css-case
-camelCase
-PascalCase or CapitalCamelCase
-snake_case or c_case
-# MACRO_CASE or UPPER_CASE
-# COBOL-CASE or TRAIN-CASE
-pathcase
-sentencecase
-"""
 from typing import Union, Optional
 import re
 
@@ -383,78 +371,3 @@ class case(object):
             capitalize=True,
             replaceSeparator=replaceSeparator
         )
-
-
-strings = [
-    "Ciao mi chiamo riccardo-Curcio? ho 35? anni!",
-    "-- ciao-mi___chiamo  riccardo-  Curcio ___ ho 35  __ anni",
-    "ciao*|*mi*|*chiamo*|*riccardo*|*curcio?*|*ho*|*35*|*?*|*anni!"
-]
-
-# print("\n *** kebab *** ")
-# for string in strings:
-#     print("{} -> {}".format(string, case.caterpillar(string)))
-
-print("\n *** Snake *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.snake(string=string, replaceSeparator="*|*")))
-
-print("\n *** camel *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.camel(string)))
-
-print("\n *** pascal *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.pascal(string)))
-
-print("\n *** kebab *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.kebab(string)))
-
-print("\n *** flat *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.flat(string)))
-
-print("\n *** raw *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.raw(string=string, replaceSeparator="*|*")))
-
-print("\n *** path *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.path(string)))
-
-print("\n *** sentence *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.sentence(string)))
-
-print("\n *** sentence capitalize*** ")
-for string in strings:
-    print("{} -> {}".format(string, case.sentence(string, False, True)))
-
-print("\n *** sentence listMode*** ")
-for string in strings:
-    print("{} -> {}".format(string, case.sentence(string, True)))
-
-print("\n *** sentence listMode capitalize*** ")
-for string in strings:
-    print("{} -> {}".format(string, case.sentence(string, True, True)))
-
-print("\n *** sentence listMode upper*** ")
-for string in strings:
-    print("{} -> {}".format(string, case.sentence(string, True, False, True)))
-
-print("\n *** custom *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.custom(string, "*|*")))
-
-print("\n *** custom between*** ")
-for string in strings:
-    print("{} -> {}".format(string, case.customBetween(string=string, open="{:", close="}", replaceSeparator="*|*")))
-
-print("\n *** piped *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.piped(string)))
-
-print("\n *** title *** ")
-for string in strings:
-    print("{} -> {}".format(string, case.title(string=string, replaceSeparator="*|*")))
