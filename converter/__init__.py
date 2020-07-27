@@ -82,7 +82,10 @@ class case(object):
         return string
 
     @staticmethod
-    def pascal(string: str = "", replaceSeparator: Optional[str] = None) -> str:
+    def pascal(
+        string: str = "",
+        replaceSeparator: Optional[str] = None
+    ) -> str:
         """Convert string to pascal case.
 
         Parameters
@@ -250,7 +253,7 @@ class case(object):
         return string
 
     @staticmethod
-    def customBetween(
+    def custom_between(
         string: str = "",
         open: str = "",
         close: Optional[str] = None,
@@ -299,7 +302,8 @@ class case(object):
         upper: bool = False,
         replaceSeparator: Optional[str] = None
     ) -> Union[str, list]:
-        """Convert string to a list of strings or string string separated by spaces.
+        """Convert string to a list of strings or string,
+         string separated by spaces.
 
         Parameters
         ----------
