@@ -22,7 +22,7 @@ from converter import case
 
 Convert string to '*snake case*' string
 
-### alias
+#### alias
 - c_case
 
 ```python
@@ -81,7 +81,7 @@ print(string_camel)
 
 ### pascal
 Convert string to '*pascal case*' string
-### alias
+#### alias
 - capital_camel
 
 
@@ -113,7 +113,7 @@ print(string_pascal)
 ### kebab
 Convert string to '*kebak case*' string
 
-### alias
+#### alias
 - kebabm
 - caterpillar
 - dash
