@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="super-case-converter-2000",
-    version="1.0.2",
+    version="1.0.3",
     author="Riccardo Curcio",
     author_email="curcioriccardo@gmail.com",
     description="Case converter",
