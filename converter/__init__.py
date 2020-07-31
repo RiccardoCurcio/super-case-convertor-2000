@@ -43,6 +43,7 @@ class case(object):
         if replaceSeparator is not None:
             string = string.replace(replaceSeparator, '_')
 
+        string = string.replace('|', '_')
         string = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', string)
         string = str(re.sub('([a-z0-9])([A-Z])', r'\1_\2', string).lower())
         string = re.sub(
@@ -54,6 +55,7 @@ class case(object):
         string = re.sub(r'(-{1,})+', '_', string)
         string = re.sub(r'(_{1,})+', '_', string)
         string = re.sub(r'(_{1,})$', '', string)
+        string = re.sub(r'^(_{1,})', '', string)
         string = re.sub(r'^(_{1,})', '', string)
         return str(string)
 
