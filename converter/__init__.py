@@ -44,6 +44,7 @@ class case(object):
             string = string.replace(replaceSeparator, '_')
 
         string = string.replace('|', '_')
+        string = string.replace('/', '_')
         string = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', string)
         string = str(re.sub('([a-z0-9])([A-Z])', r'\1_\2', string).lower())
         string = re.sub(
@@ -60,7 +61,7 @@ class case(object):
         return str(string)
 
     """ Define alias for snake """
-    cCase = snake
+    c_case = snake
 
     @staticmethod
     def camel(string: str = "", replaceSeparator: Optional[str] = None) -> str:
@@ -109,7 +110,7 @@ class case(object):
         return string
 
     """Define alias for capitalCamel"""
-    capitalCamel = pascal
+    capital_camel = pascal
 
     @staticmethod
     def kebab(string: str = "", replaceSeparator: Optional[str] = None) -> str:
