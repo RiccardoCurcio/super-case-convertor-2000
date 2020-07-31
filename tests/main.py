@@ -153,5 +153,185 @@ class TestCaseConverter(unittest.TestCase):
         self.assertEqual(case.flat(string=string_title), 'stringcase')
         self.assertEqual(case.flat(string=string_raw), 'stringcase')
 
+    def test_raw(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_piped = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.raw(string=string_camel), 'string case')
+        self.assertEqual(case.raw(string=string_raw), 'string case')
+        self.assertEqual(case.raw(string=string_custom, replaceSeparator='!!'), 'string case')
+        self.assertEqual(case.raw(string=string_camel), 'string case')
+        self.assertEqual(case.raw(string=string_pascal), 'string case')
+        self.assertEqual(case.raw(string=string_kebab), 'string case')
+        self.assertEqual(case.raw(string=string_path, replaceSeparator='/'), 'string case')
+        self.assertEqual(case.raw(string=string_piped), 'string case')
+        self.assertEqual(case.raw(string=string_sentence), 'string case')
+        self.assertEqual(case.raw(string=string_title), 'string case')
+        self.assertEqual(case.raw(string=string_raw), 'string case')
+
+    def test_path(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_piped = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.path(string=string_camel), 'string/case')
+        self.assertEqual(case.path(string=string_raw), 'string/case')
+        self.assertEqual(case.path(string=string_custom, replaceSeparator='!!'), 'string/case')
+        self.assertEqual(case.path(string=string_camel), 'string/case')
+        self.assertEqual(case.path(string=string_pascal), 'string/case')
+        self.assertEqual(case.path(string=string_kebab), 'string/case')
+        self.assertEqual(case.path(string=string_path, replaceSeparator='/'), 'string/case')
+        self.assertEqual(case.path(string=string_piped), 'string/case')
+        self.assertEqual(case.path(string=string_sentence), 'string/case')
+        self.assertEqual(case.path(string=string_title), 'string/case')
+        self.assertEqual(case.path(string=string_raw), 'string/case')
+
+    def test_piped(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_piped = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.piped(string=string_camel), 'string|case')
+        self.assertEqual(case.piped(string=string_raw), 'string|case')
+        self.assertEqual(case.piped(string=string_custom, replaceSeparator='!!'), 'string|case')
+        self.assertEqual(case.piped(string=string_camel), 'string|case')
+        self.assertEqual(case.piped(string=string_pascal), 'string|case')
+        self.assertEqual(case.piped(string=string_kebab), 'string|case')
+        self.assertEqual(case.piped(string=string_path, replaceSeparator='/'), 'string|case')
+        self.assertEqual(case.piped(string=string_piped), 'string|case')
+        self.assertEqual(case.piped(string=string_sentence), 'string|case')
+        self.assertEqual(case.piped(string=string_title), 'string|case')
+        self.assertEqual(case.piped(string=string_raw), 'string|case')
+
+    def test_custom(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_custom = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.custom(string=string_camel, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_raw, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_custom, separator='<#>', replaceSeparator='!!'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_camel, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_pascal, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_kebab, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_path, separator='<#>', replaceSeparator='/'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_custom, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_sentence, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_title, separator='<#>'), 'string<#>case')
+        self.assertEqual(case.custom(string=string_raw, separator='<#>'), 'string<#>case')
+
+    def test_custom_between(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_custom = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.custom_between(string=string_camel, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_raw, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_custom, open='<', close='>', replaceSeparator='!!'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_camel, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_pascal, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_kebab, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_path, open='<', close='>', replaceSeparator='/'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_custom, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_sentence, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_title, open='<', close='>'), ['<string>', '<case>'])
+        self.assertEqual(case.custom_between(string=string_raw, open='<', close='>'), ['<string>', '<case>'])
+
+    def test_title(self):
+        string_snake = "string_case"
+        string_raw = "String Case"
+        string_custom = "string!!case"
+
+        string_camel = "stringCase"
+        string_pascal = "StringCase"
+        string_kebab = "string-case"
+        # string_flat = "snakecase"
+        string_path = "string/case"
+        string_piped = "stringCase"
+        # string_custom_between = "snakeCase"
+        # open = '<'
+        # close = '>'
+        string_sentence = "String case"
+        string_title = "stringCase"
+        string_raw = "String Case"
+
+        self.assertEqual(case.title(string=string_camel), 'String Case')
+        self.assertEqual(case.title(string=string_raw), 'String Case')
+        self.assertEqual(case.title(string=string_custom, replaceSeparator='!!'), 'String Case')
+        self.assertEqual(case.title(string=string_camel), 'String Case')
+        self.assertEqual(case.title(string=string_pascal), 'String Case')
+        self.assertEqual(case.title(string=string_kebab), 'String Case')
+        self.assertEqual(case.title(string=string_path, replaceSeparator='/'), 'String Case')
+        self.assertEqual(case.title(string=string_piped), 'String Case')
+        self.assertEqual(case.title(string=string_sentence), 'String Case')
+        self.assertEqual(case.title(string=string_title), 'String Case')
+        self.assertEqual(case.title(string=string_raw), 'String Case')
+
 if __name__ == '__main__':
     unittest.main()
