@@ -16,4 +16,30 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from converter.src.case import case
+
+from typing import Union, Optional
+from converter.src.snake import snake
+import re
+
+
+class raw(object):
+    @staticmethod
+    def raw(string: str = "", replaceSeparator: Optional[str] = None) -> str:
+        """Convert string to raw case.
+
+        Parameters
+        ----------
+        string : str
+            String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
+
+        Returns
+        -------
+        str
+            String converted to raw case.
+
+        """
+        string = snake.snake(string=string, replaceSeparator=replaceSeparator)
+        string = string.replace('_', ' ')
+        return string

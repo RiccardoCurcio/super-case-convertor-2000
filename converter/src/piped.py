@@ -16,4 +16,31 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from converter.src.case import case
+
+from typing import Union, Optional
+from converter.src.snake import snake
+import re
+
+
+class piped(object):
+    @staticmethod
+    def piped(string: str = "", replaceSeparator: Optional[str] = None) -> str:
+        """Convert string to piped string.
+
+        Parameters
+        ----------
+        string : str
+            String to convert.
+        replaceSeparator : Optional[str]
+            If is not None peplace `replaceSeparator` with `_`
+
+        Returns
+        -------
+        str
+            String converted to piped string.
+
+        """
+        string = snake.snake(string=string, replaceSeparator=replaceSeparator)
+        string = string.replace('_', '|')
+
+        return string
