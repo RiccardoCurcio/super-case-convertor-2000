@@ -16,4 +16,32 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from converter.src.case import case
+
+from converter.src.snake import snake
+from converter.src.camel import camel
+from converter.src.pascal import pascal
+from converter.src.kebab import kebab
+from converter.src.flat import flat
+from converter.src.raw import raw
+from converter.src.path import path
+from converter.src.piped import piped
+from converter.src.custom import custom
+from converter.src.customBetween import customBetween
+from converter.src.sentence import sentence
+from converter.src.title import title
+
+class case(
+    snake,
+    camel,
+    pascal,
+    kebab,
+    flat,
+    raw,
+    path,
+    piped,
+    custom,
+    customBetween,
+    sentence,
+    title
+    ):
+    pass
