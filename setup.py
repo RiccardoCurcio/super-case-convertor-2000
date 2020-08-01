@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="super-case-converter-2000",
-    version="1.1.1",
+    version="1.1.2",
     license='GPL v3',
     author="Riccardo Curcio",
     author_email="curcioriccardo@gmail.com",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/RiccardoCurcio/super-case-convertor-2000.git",
-    download_url = 'https://github.com/RiccardoCurcio/super-case-convertor-2000/archive/v1.1.1.tar.gz',
+    download_url = 'https://github.com/RiccardoCurcio/super-case-convertor-2000/archive/v1.1.2.tar.gz',
     packages=setuptools.find_packages(),
     keywords = [
         'snake',
@@ -30,7 +30,7 @@ setuptools.setup(
     install_requires=['typing'],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GPL v3 License",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
