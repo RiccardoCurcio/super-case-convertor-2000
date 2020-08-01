@@ -1,5 +1,5 @@
 
-# **Super-case-convertor-2000**
+# **Super case converter 2000**
 
 ### Quick start
 
